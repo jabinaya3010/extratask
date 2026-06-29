@@ -1,0 +1,19 @@
+<script>
+    let input = prompt("Enter booked seats separated by commas:");
+
+let bookedSeats = input.split(",").map(Number);
+
+function availableSeats(bookedSeats) {
+    let result = [];
+
+    for (let i = 1; i <= 10; i++) {
+        if (!bookedSeats.includes(i)) {
+            result.push(i);
+        }
+    }
+
+    return result;
+}
+
+console.log(availableSeats(bookedSeats));
+</script>
